@@ -14,8 +14,8 @@ environment {
                 sh 'mvn clean deploy'
             }
         }
-       stage("Jar Publish") {
-            steps {
+              stage("Jar Publish") {
+             steps {
                 script {
                         echo '<--------------- Jar Publish Started --------------->'
                          def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"arti-cred"
@@ -24,7 +24,7 @@ environment {
                               "files": [
                                 {
                                   "pattern": "jarstaging/(*)",
-                                  "target": "libs-release-local/{1}",
+                                  "target": "mavenrepo-libs-release/{1}",
                                   "flat": "false",
                                   "props" : "${properties}",
                                   "exclusions": [ "*.sha1", "*.md5"]
