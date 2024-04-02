@@ -14,7 +14,7 @@ environment {
             }
         }
     
-    #stage('SonarQube analysis') {
+    /* #stage('SonarQube analysis') {
     #environment {
       #scannerHome = tool 'sonar-scanner'
     #}
@@ -23,7 +23,7 @@ environment {
       #sh "${scannerHome}/bin/sonar-scanner"
     #}
     #}
-  #}
+  #} */
 } 
 }
  
